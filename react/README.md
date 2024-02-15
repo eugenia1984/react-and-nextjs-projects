@@ -19,6 +19,7 @@ npm run dev
 3. **post-app**
 
 ---
+
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/external-others-bomsymbols-/30/external-colors-flat-02-digital-design-others-bomsymbols-.png" alt="Color palette"/> Ways to add styles
@@ -38,6 +39,7 @@ const Post = () => {
 ```
 
 `styles.css`
+
 ```CSS
 .headline {
   font-size: 2rem;
@@ -61,11 +63,13 @@ const Post = () => {
 ```
 
 `Post.module.css`
+
 ```CSS
 .headline {
   font-size: 2rem;
 }
 ```
+
 3. In line style, not the best way. We pass between `{}`, to tell JSX that it's a JavaScript code inside, an object with the css attributes as key of the object (pay attention that e use camelCase when we have more than onw word).
 
 ```JSX
@@ -77,7 +81,16 @@ const Post = () => {
   )
 }
 ```
+
 ---
+
+---
+
+## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Props
+
+
+- If the `props` it's a function, we named it `onNameOfTheFunction`, like for example `onCreatePost`.
+
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Event Listener
@@ -107,16 +120,16 @@ const NewPost = () => {
 export default NewPost;
 ```
 
-
 ## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Event Listener
 
 - **onChange** the event is the `change`, it's always `onEvent`, like onKeyDown, onKeyUp, onChange, etc.
 
-- **changeBodyHandler** it's the function that will be execute once the change event passes. 
+- **changeBodyHandler** it's the function that will be execute once the change event passes.
 
 At this time we are just passing the event and getting the value.
 
 ---
+
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Hooks: useState
@@ -130,7 +143,9 @@ const stateData = useState('')
 stateData[0] // current state value
 stateData[1] // state updating function
 ```
+
 ---
+
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Prop children
@@ -138,4 +153,11 @@ stateData[1] // state updating function
 It's refers to the content that pass between the open and closed tag of the component.
 
 ---
+
+---
+
+## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Conditional render
+
+Using the `&&` if it's truthy it will be render in the UI.
+
 ---
