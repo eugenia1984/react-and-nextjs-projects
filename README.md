@@ -13,14 +13,18 @@
 
 <img src="https://github.com/eugenia1984/react-and-nextjs-projects/assets/72580574/560f0949-bd73-4325-b6b0-4b1e359e2aa5" width="350px"  alt="Vanilla JavaScript app"/>
 
+
 - **react-vs-vanilla-example**: the same app from vanilla.js but a React App with Vite
 
 <img src="https://github.com/eugenia1984/react-and-nextjs-projects/assets/72580574/2d142d9a-0bed-4583-bc9e-57e7596364c6" width="350px"  alt="React app"/>
  
 
+
 2. **first-app** a really simple first app with app router and two pages.
 
+
 ---
+
 
 ## Technologies
 
