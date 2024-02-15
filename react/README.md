@@ -80,3 +80,55 @@ const Post = () => {
 ---
 ---
 
+## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Event Listener
+
+```JSX
+import classes from "./NewPost.module.css";
+
+const NewPost = () => {
+  const changeBodyHandler = (event) => {
+    console.log(event.target.value);
+  }
+
+  return (
+    <form className={classes.form}>
+      <p>
+        <label htmlFor="body">Text</label>
+        <textarea id="body" required rows={3} onChange={changeBodyHandler} />
+      </p>
+      <p>
+        <label htmlFor="name">Your name</label>
+        <input type="text" id="name" required />
+      </p>
+    </form>
+  );
+};
+
+export default NewPost;
+```
+
+
+## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Event Listener
+
+- **onChange** the event is the `change`, it's always `onEvent`, like onKeyDown, onKeyUp, onChange, etc.
+
+- **changeBodyHandler** it's the function that will be execute once the change event passes. 
+
+At this time we are just passing the event and getting the value.
+
+---
+---
+
+## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Hooks: useState
+
+- **hook** a React function, it must be execute inside a React component function.
+
+- **useState**: `const [value, setValue] = useState(initialValue)`, it will store an internal value for the component, it's a variable that will store the value, we can have an initial value and the this value will be updated with the setValue function.
+
+```JSX
+const stateData = useState('')
+stateData[0] // current state value
+stateData[1] // state updating function
+```
+---
+---

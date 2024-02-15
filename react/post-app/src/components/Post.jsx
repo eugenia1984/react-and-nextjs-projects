@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import classes from './Post.module.css';
 
 const Post = ({ author, body }) => {

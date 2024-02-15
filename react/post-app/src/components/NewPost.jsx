@@ -1,22 +1,24 @@
-import classes from './NewPost.module.css';
+import PropTypes from "prop-types";
 
-const NewPost = () => {
-  function changeBodyHandler(event) {
-    console.log(event.target.value);
-  }
+import classes from "./NewPost.module.css";
 
+const NewPost = ({ onBodyChange, onAuthorChange }) => {
   return (
     <form className={classes.form}>
       <p>
         <label htmlFor="body">Text</label>
-        <textarea id="body" required rows={3} onChange={changeBodyHandler}/>
+        <textarea id="body" rows={3} required onChange={onBodyChange} />
       </p>
       <p>
         <label htmlFor="name">Your name</label>
-        <input type="text" id="name" required />
+        <input type="text" id="name"  required onChange={onAuthorChange} />
       </p>
     </form>
   );
-}
+};
 
+NewPost.propTypes = {
+  onBodyChange: PropTypes.function,
+  onAuthorChange: PropTypes.function,
+};
 export default NewPost;

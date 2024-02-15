@@ -8,3 +8,10 @@
   grid-template-columns: repeat(3, 30%);
   justify-content: center;
 }
+
+@media all and (max-width: 765px ) {
+  .posts {
+    grid-template-columns: repeat(2, 45%);
+    max-width: 40rem;
+  }
+}
