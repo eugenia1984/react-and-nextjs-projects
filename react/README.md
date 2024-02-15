@@ -146,18 +146,23 @@ stateData[1] // state updating function
 
 ---
 
----
-
 ## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Prop children
 
 It's refers to the content that pass between the open and closed tag of the component.
 
 ---
 
----
 
 ## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Conditional render
 
 Using the `&&` if it's truthy it will be render in the UI.
 
 ---
+
+## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Form
+
+The submit `<button type="submit">Submit</button>` always MUST have the **submit** type, because for example I can have a second button to cancel, and that button would be `type="button"`; in this way the form will now that the submit data will happen only once clicking in the **submit** button.
+
+And the ``<form>`` tag must have an **onSubmit** Event Listener, that will be a function to be execute once the submit button is clicked in order to submit the form.
+
+Once it submitted it will make a fetch to the BackEnd to send the data with an HTTP request, we can prevent that with: `event.preventDefault();`
