@@ -16,6 +16,9 @@ npm install
 npm run dev
 ```
 
+3. **post-app**
+
+---
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/external-others-bomsymbols-/30/external-colors-flat-02-digital-design-others-bomsymbols-.png" alt="Color palette"/> Ways to add styles
@@ -75,3 +78,5 @@ const Post = () => {
 }
 ```
 ---
+---
+

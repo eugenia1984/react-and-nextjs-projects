@@ -5,9 +5,12 @@
 1. **react**: some React exercise, with this file structure:
 
 ```
+> post-app
 > react-vs-vanilla-example
 > vanilla-js
 ```
+
+- **post-app**
 
 - **vanilla-js**: an example of what we have with Vanilla JavaScript, before React
 

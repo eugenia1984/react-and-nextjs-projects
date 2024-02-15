@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { content } from "./utils/content";
-import "./App.css";
-import ButtonTab from "./components/ButtonTab";
+import { useState } from 'react';
+import { content } from './utils/content';
+import './App.css';
+import ButtonTab from './components/ButtonTab';
 
 function App() {
   const [activeContentIndex, setActiveContentIndex] = useState(0);
