@@ -5,16 +5,15 @@
 1. **react**: some React exercise, with this file structure:
 
 ```
-> react-vs-vanilla-example -> the same app from vanilla.js but a React App with Vite
-> vanilla-js -> an example of what we have with Vanilla JavaScript, before React
+> react-vs-vanilla-example
+> vanilla-js
 ```
 
-- vanilla-js
+- **vanilla-js**: an example of what we have with Vanilla JavaScript, before React
 
 <img src="https://github.com/eugenia1984/react-and-nextjs-projects/assets/72580574/560f0949-bd73-4325-b6b0-4b1e359e2aa5" width="350px"  alt="Vanilla JavaScript app"/>
 
- 
-- react-vs-vanilla-example
+- **react-vs-vanilla-example**: the same app from vanilla.js but a React App with Vite
 
 <img src="https://github.com/eugenia1984/react-and-nextjs-projects/assets/72580574/2d142d9a-0bed-4583-bc9e-57e7596364c6" width="350px"  alt="React app"/>
  
