@@ -1,4 +1,3 @@
-const d = document;
 const content = [
   [
     "React is extremely popular",
@@ -9,22 +8,21 @@ const content = [
   [
     "Components, JSX & Props",
     "State",
-    "Hooks (e.g., useEffect())",
+    "Hooks (e.g., useState(), useEffect())",
     "Dynamic rendering"
   ]
 ];
 
-const btnWhyReact = d.getElementById("btn-why-react");
-const btnCoreFeature = d.getElementById("btn-core-features");
-const btnResources = d.getElementById("btn-resources");
-const tabContent = d.getElementById("tab-content");
+const btnWhyReact = document.getElementById("btn-why-react");
+const btnCoreFeature = document.getElementById("btn-core-features");
+const tabContent = document.getElementById("tab-content");
 
 function displayContent(items) {
   let listContent = "";
   for (const item of items) {
     listContent += `<li>${item}</li>`;
   }
-  const list = d.createElement("ul");
+  const list = document.createElement("ul");
   tabContent.innerHTML = "";
   list.innerHTML = listContent; 
   tabContent.append(list);
@@ -33,7 +31,6 @@ function displayContent(items) {
 function highlightButton(btn) {
   btnWhyReact.className = "";
   btnCoreFeature.className = "";
-  btnResources.className = "";
   btn.className = "active";
 }
 

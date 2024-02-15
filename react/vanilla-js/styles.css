@@ -74,6 +74,8 @@ header p {
   -moz-border-radius: 6px 6px 0 0;
   -ms-border-radius: 6px 6px 0 0;
   -o-border-radius: 6px 6px 0 0;
+  font-size: 1.25rem;
+  text-transform: uppercase;
 }
 
 #tabs button:hover,
@@ -90,6 +92,7 @@ header p {
   -moz-border-radius: 0 6px 6px 6px;
   -ms-border-radius: 0 6px 6px 6px;
   -o-border-radius: 0 6px 6px 6px;
+  font-size: 1.25rem;
 }
 
 #tab-content li {
