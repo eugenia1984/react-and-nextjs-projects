@@ -1,14 +1,28 @@
+/* Variables */
+:root {
+  --bg-color-dark: #181c1f;
+  --bg-color-darker: #282f33;
+  --bg-color-light-gray: #2d3942;
+  --txt-color-light: #bdd1d4;
+  --txt-color-primary: #f3e248;
+  --txt-color-white: #dbd7b1;
+  --txt-color-whiter: #e0eff1;
+  --txt-color-secondary: #273133;
+}
+
+/* Reset */
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: sans-serif;
-  background-color: #181c1f;
-  color: #bdd1d4;
-  margin: 2rem;
+  background-color: var(--bg-color-dark);
+  color: var(--txt-color-light);
+  margin: 4rem 2rem;
 }
 
+/* Header */
 header {
   margin: 2rem 0;
   display: flex;
@@ -23,14 +37,15 @@ header img {
 
 header h1 {
   margin: 0;
-  color: #f3e248;
+  color: var(--txt-color-primary);
 }
 
 header p {
   margin: 0;
-  color: #dbd7b1;
+  color: var(--txt-color-white);
 }
 
+/* Tabs */
 #tabs {
   max-width: 32rem;
   margin: 2rem 0;
@@ -47,26 +62,34 @@ header p {
 #tabs button {
   font: inherit;
   font-size: 0.85rem;
-  background-color: #282f33;
+  background-color: var(--bg-color-darker);
   border: none;
-  border-bottom-color: #f3e248;
-  color: #e0eff1;
-  border-radius: 4px 4px 0 0;
+  border-bottom-color: var(--txt-color-primary);
+  color: var(--txt-color-whiter);
+  border-radius: 6px 6px 0 0;
   padding: 0.75rem 1rem;
   cursor: pointer;
   transition: all 0.2s ease-out;
+  -webkit-border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  -ms-border-radius: 6px 6px 0 0;
+  -o-border-radius: 6px 6px 0 0;
 }
 
 #tabs button:hover,
 #tabs button.active {
-  background-color: #f3e248;
-  color: #273133;
+  background-color: var(--txt-color-primary);
+  color: var( --txt-color-secondary);
 }
 
 #tab-content {
-  background-color: #2d3942;
-  border-radius: 0 4px 4px 4px;
+  background-color: var(--bg-color-light-gray);
+  border-radius: 0 6px 6px 6px;
   padding: 1rem;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px 6px;
+  -ms-border-radius: 0 6px 6px 6px;
+  -o-border-radius: 0 6px 6px 6px;
 }
 
 #tab-content li {

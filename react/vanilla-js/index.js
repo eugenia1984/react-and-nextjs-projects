@@ -1,3 +1,4 @@
+const d = document;
 const content = [
   [
     "React is extremely popular",
@@ -10,51 +11,44 @@ const content = [
     "State",
     "Hooks (e.g., useEffect())",
     "Dynamic rendering"
-  ],
-  [
-    "Official web page (react.dev)",
-    "Next.js (Fullstack framework)",
-    "React Native (build native mobile apps with React)"
   ]
 ];
 
-const btnWhyReact = document.getElementById("btn-why-react");
-const btnCoreFeature = document.getElementById("btn-core-features");
-const btnResources = document.getElementById("btn-resources");
-const tabContent = document.getElementById("tab-content");
+const btnWhyReact = d.getElementById("btn-why-react");
+const btnCoreFeature = d.getElementById("btn-core-features");
+const btnResources = d.getElementById("btn-resources");
+const tabContent = d.getElementById("tab-content");
 
 function displayContent(items) {
   let listContent = "";
   for (const item of items) {
     listContent += `<li>${item}</li>`;
   }
-  const list = document.createElement("ul");
-  tabContent.innerHTML = ""; // clear existing content
-  list.innerHTML = listContent; // insert new content
+  const list = d.createElement("ul");
+  tabContent.innerHTML = "";
+  list.innerHTML = listContent; 
   tabContent.append(list);
 }
 
 function highlightButton(btn) {
-  // Clear all existing styling / highlights
   btnWhyReact.className = "";
   btnCoreFeature.className = "";
   btnResources.className = "";
-  btn.className = "active"; // set new style / highlight
+  btn.className = "active";
 }
 
 function handleClick(event) {
   const btnId = event.target.id;
   highlightButton(event.target);
+
   if (btnId === "btn-why-react") {
     displayContent(content[0]);
-  } else if (btnId === "btn-core-features") {
-    displayContent(content[1]);
   } else {
-    displayContent(content[2]);
-  }
+    displayContent(content[1]);
+  } 
 }
 
-displayContent(content[0]); // initially show this content
+displayContent(content[0]); 
 
 btnWhyReact.addEventListener("click", handleClick);
 btnCoreFeature.addEventListener("click", handleClick);
