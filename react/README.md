@@ -144,6 +144,8 @@ stateData[0] // current state value
 stateData[1] // state updating function
 ```
 
+-> If the new state depends on the old state, always: `setValue((prevValue) => [newValue, ...prevValue])` or `setValue((prevValue) => newValue)`
+
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Prop children

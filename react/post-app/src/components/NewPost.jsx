@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import classes from "./NewPost.module.css";
 
-const NewPost = ({ onCancel }) => {
+const NewPost = ({ onCancel, onAddPost }) => {
   const [enteredBody, setEnteredBody] = useState("");
   const [enteredAuthor, setEnteredAuthor] = useState("");
 
@@ -20,13 +20,12 @@ const NewPost = ({ onCancel }) => {
     event.preventDefault();
     const postData = {
       body: enteredBody,
-      author: enteredAuthor
+      author: enteredAuthor,
     };
 
-    console.log("postData ", postData);
-
+    onAddPost(postData);
     onCancel();
-  }
+  };
 
   return (
     <form className={classes.form} onSubmit={submitHandler}>
@@ -36,10 +35,12 @@ const NewPost = ({ onCancel }) => {
       </p>
       <p>
         <label htmlFor="name">Your name</label>
-        <input type="text" id="name"  required onChange={authorChangeHandler} />
+        <input type="text" id="name" required onChange={authorChangeHandler} />
       </p>
       <p className={classes.actions}>
-        <button type="button" onClick={onCancel}>Cancel</button>
+        <button type="button" onClick={onCancel}>
+          Cancel
+        </button>
         <button type="submit">Submit</button>
       </p>
     </form>
@@ -48,6 +49,7 @@ const NewPost = ({ onCancel }) => {
 
 NewPost.propTypes = {
   onCancel: PropTypes.function,
+  onAddPost: PropTypes.function,
 };
 
 export default NewPost;
