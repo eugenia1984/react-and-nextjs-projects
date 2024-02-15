@@ -1,6 +1,6 @@
-# Next.js 14 & React - Projects
+# <img width="28" height="28" src="https://img.icons8.com/fluency-systems-regular/28/nextjs.png" alt="Next.js icon"/> Next.js 14 & <img width="28" height="28" src="https://img.icons8.com/office/28/react.png" alt="React icon"/>  React - Projects
 
-## What you will find?
+## <img width="30" height="30" src="https://img.icons8.com/3d-fluency/30/search.png" alt="Search"/>   What you will find?
 
 1. **react**: some React exercise, with this file structure:
 
@@ -26,7 +26,7 @@
 ---
 
 
-## Technologies
+## <img width="30" height="30" src="https://img.icons8.com/cotton/30/monitor--v1.png" alt="monitor"/> Technologies
 
 - <img width="28" height="28" src="https://img.icons8.com/color/28/html-5--v1.png" alt="HTML5 icon"/> HTML5
 
