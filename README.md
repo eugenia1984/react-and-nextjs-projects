@@ -11,7 +11,7 @@
 
 - vanilla-js
 
- ![image](https://github.com/eugenia1984/react-and-nextjs-projects/assets/72580574/560f0949-bd73-4325-b6b0-4b1e359e2aa5)
+<img src="https://github.com/eugenia1984/react-and-nextjs-projects/assets/72580574/560f0949-bd73-4325-b6b0-4b1e359e2aa5" width="200px"  alt="Vanilla JavaScript app"/>
 
  
 - react-vs-vanilla-example
