@@ -34,9 +34,9 @@
 
 - <img width="28" height="28" src="https://img.icons8.com/color/28/javascript.png" alt="JavaScript icon"/> JavaScript
 
-- <img width="28" height="28" src="https://img.icons8.com/office/28/react.png" alt="React icon"/> React
+- [<img width="28" height="28" src="https://img.icons8.com/office/28/react.png" alt="React icon"/> React](https://react.dev/) : react, react-DOM.
 
-- <img width="28" height="28" src="https://img.icons8.com/fluency-systems-regular/28/nextjs.png" alt="Next.js icon"/> Next.js
+- [<img width="28" height="28" src="https://img.icons8.com/fluency-systems-regular/28/nextjs.png" alt="Next.js icon"/> Next.js](https://nextjs.org/)
 
 
 
