@@ -9,6 +9,16 @@
 > vanilla-js -> an example of what we have with Vanilla JavaScript, before React
 ```
 
+- vanilla-js
+
+ ![image](https://github.com/eugenia1984/react-and-nextjs-projects/assets/72580574/560f0949-bd73-4325-b6b0-4b1e359e2aa5)
+
+ 
+- react-vs-vanilla-example
+
+ ![image](https://github.com/eugenia1984/react-and-nextjs-projects/assets/72580574/2d142d9a-0bed-4583-bc9e-57e7596364c6)
+ 
+
 2. **first-app** a really simple first app with app router and two pages.
 
 ---
