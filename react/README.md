@@ -132,3 +132,10 @@ stateData[1] // state updating function
 ```
 ---
 ---
+
+## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Prop children
+
+It's refers to the content that pass between the open and closed tag of the component.
+
+---
+---
