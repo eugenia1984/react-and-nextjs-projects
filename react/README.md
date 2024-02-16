@@ -329,4 +329,36 @@ export const RootLayout = () => {
 
 - **useNavigate** is a hook of react-router-dom. First we import: `import { useNavigate } from "react-router-dom";`, then we get the function: `const navigate = useNavigate();` and finally we use it: `navigate('..');`
 
+- **loader** to make the data fetching before we load the page:
+
+```JSX
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Posts />,
+        loader: postsLoader,
+        children: [{ path: "/create-post", element: <NewPost /> }],
+      },
+    ],
+  },
+]);
+```
+
+Inside Post component:
+
+```JSX
+export async function loader() {
+  const response = await fetch("http://localhost:8080/posts");
+  const responseData = await response.json();
+
+  return responseData.posts;
+}
+```
+
+Now we can use it in `PostList`, first import: `import { useLoaderData } from "react-router-dom";` then use it: `const posts = useLoaderData();`
+
 ---
