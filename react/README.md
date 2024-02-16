@@ -213,7 +213,7 @@ fetch('http://localhost:8080/posts')
 
 ## Hook: useEffect
 
-- It get a **function** as a first param, and a **dependency array** as a second param. 
+- It get a **function** as a first param, and a **dependency array** as a second param.
 
 - The function will be execute when ever it considers a required execution depending the **dependency array**:
 
@@ -239,7 +239,7 @@ useEffect(() => {
     if(!response.ok) {
         // here we can manage an error
       }
-      
+
     setPosts(responseData.posts);
 
     setIsFetching(false); // to stop showing Loading...
@@ -265,10 +265,64 @@ To have different paths, so we can show different pages(components).
 --------------------------------
 |               |              |
 /           /products     /products/1
-Landing      Products     Product Detail        
+Landing      Products     Product Detail
   Page         Page           Page
 ```
 
 - Library: **react-router-dom**
+
+1. Import: `import { RouterProvider } from "react-router-dom";`
+
+2. Wrap the `<App>` within `<RouterProvider>`
+
+```JSX
+<RouterProvider>
+  <App />
+</RouterProvider>
+```
+
+3. Import: `import { createBrowserRouter } from "react-router-dom";`
+
+4. Store in a constant: 
+```JSX
+const router = createBrowserRouter([
+  { path: '/', element: <App/>}
+]);
+```
+
+5. Pass the configuration value as a prop: `<RouterProvider router={router}>`
+
+-> When the app it's more complex we have **layouts** to the share components. Are routes that nest others routes inside.
+
+The **children** will be the routes inside the layout:
+
+```JSX
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { path: "/", element: <App /> },
+      { path: "/create-post", element: <NewPost /> },
+    ],
+  },
+]);
+```
+
+And the **RootLayout** must have the **Outlet**:
+
+```JSX
+import { Outlet } from "react-router-dom";
+import MainHeader from "../components/MainHeader";
+
+export const RootLayout = () => {
+  return (
+    <>
+      <MainHeader />
+      <Outlet />
+    </>
+  );
+};
+```
 
 ---
