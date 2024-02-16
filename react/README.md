@@ -325,4 +325,8 @@ export const RootLayout = () => {
 };
 ```
 
+- **Link**, first we need to import: `import { Link } from "react-router-dom";`, and then we can use as a link, it will be show as an `<a>` tag but won't re-render the SPA. It has a **to** prop, that is equal the `href` of the anchor tag.
+
+- **useNavigate** is a hook of react-router-dom. First we import: `import { useNavigate } from "react-router-dom";`, then we get the function: `const navigate = useNavigate();` and finally we use it: `navigate('..');`
+
 ---
