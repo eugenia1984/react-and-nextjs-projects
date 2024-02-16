@@ -1,14 +1,10 @@
 import { useEffect, useState } from "react";
 
-import PropTypes from "prop-types";
-
-import NewPost from "./NewPost";
 import Post from "./Post";
-import Modal from "./Modal";
 
 import classes from "./PostList.module.css";
 
-const PostsList = ({ isPosting, onStopPosting }) => {
+const PostsList = () => {
   const [posts, setPosts] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
 
@@ -21,7 +17,7 @@ const PostsList = ({ isPosting, onStopPosting }) => {
       if(!response.ok) {
         console.error("Error fetching the posts");
       }
-      
+
       setPosts(responseData.posts);
       setIsFetching(false);
     }
@@ -29,26 +25,20 @@ const PostsList = ({ isPosting, onStopPosting }) => {
     fetchPosts();
   }, []);
 
-  const addPostHandler = (postData) => {
-    fetch("http://localhost:8080/posts", {
-      method: "POST",
-      body: JSON.stringify(postData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+  // const addPostHandler = (postData) => {
+  //   fetch("http://localhost:8080/posts", {
+  //     method: "POST",
+  //     body: JSON.stringify(postData),
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   });
 
-    setPosts((existingPosts) => [postData, ...existingPosts]);
-  };
+  //   setPosts((existingPosts) => [postData, ...existingPosts]);
+  // };
 
   return (
     <>
-      {isPosting && (
-        <Modal onClose={onStopPosting}>
-          <NewPost onCancel={onStopPosting} onAddPost={addPostHandler} />
-        </Modal>
-      )}
-
       {!isFetching && posts.length > 0 && (
         <ul className={classes.posts}>
           {posts.map((post, index) => (
@@ -73,11 +63,6 @@ const PostsList = ({ isPosting, onStopPosting }) => {
       )}
     </>
   );
-};
-
-PostsList.propTypes = {
-  isPosting: PropTypes.boolean,
-  onStopPosting: PropTypes.function,
 };
 
 export default PostsList;
