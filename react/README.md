@@ -361,4 +361,10 @@ export async function loader() {
 
 Now we can use it in `PostList`, first import: `import { useLoaderData } from "react-router-dom";` then use it: `const posts = useLoaderData();`
 
+- **action** that will be trigger once a form is submit.
+
+### Dynamic routes
+
+Dynamic path parameter: ` { path: "/:id" },`
+
 ---
