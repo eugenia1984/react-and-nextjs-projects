@@ -226,13 +226,49 @@ fetch('http://localhost:8080/posts')
 Example:
 
 ```JSX
+const [posts, setPosts] = useState([]);
+const [isFetching, setIsFetching] = useState(false);
+
 useEffect(() => {
   async function fetchPosts() {
+    setIsFetching(true); // To show loading...
+
     const response = await fetch("http://localhost:8080/posts");
     const responseData = await response.json();
+
+    if(!response.ok) {
+        // here we can manage an error
+      }
+      
     setPosts(responseData.posts);
+
+    setIsFetching(false); // to stop showing Loading...
   }
 
   fetchPosts();
 }, []);
 ```
+
+-> To manage **side effects**.
+
+---
+
+## Routing
+
+To have different paths, so we can show different pages(components).
+
+```
+            React App
+                |
+        React App are SPAs!
+                |
+--------------------------------
+|               |              |
+/           /products     /products/1
+Landing      Products     Product Detail        
+  Page         Page           Page
+```
+
+- Library: **react-router-dom**
+
+---
