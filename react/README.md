@@ -18,6 +18,17 @@ npm run dev
 
 3. **post-app**
 
+4. **Dummy BackEnd**.This is a Dummy Back End in order to be running with the **post-app**, so all the post would be able to...
+
+... have the post list with `get/posts`
+
+... has one post by id with `get/post/{id}`
+
+...add a new post to the list of existing post with: `post/posts`
+
+
+Need to  Install de dependencies (node_module): ``npm install`` and run the server: ``npm start``
+
 ---
 
 ---
