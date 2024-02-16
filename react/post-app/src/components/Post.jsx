@@ -1,17 +1,22 @@
-import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
-import classes from './Post.module.css';
+import PropTypes from "prop-types";
 
-const Post = ({ author, body }) => {
+import classes from "./Post.module.css";
+
+const Post = ({ id, author, body }) => {
   return (
     <li className={classes.post}>
-      <p className={classes.author}>{author}</p>
-      <p className={classes.text}>{body}</p>
+      <Link to={id}>
+        <p className={classes.author}>{author}</p>
+        <p className={classes.text}>{body}</p>
+      </Link>
     </li>
   );
 };
 
 Post.propTypes = {
+  id: PropTypes.string,
   author: PropTypes.string,
   body: PropTypes.string,
 };

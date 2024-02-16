@@ -21,6 +21,7 @@ function PostDetails() {
       </Modal>
     );
   }
+  
   return (
     <Modal>
       <main className={classes.details}>

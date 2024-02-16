@@ -7,6 +7,16 @@
   animation: animate-in 1s ease-out forwards;
 }
 
+.post a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.post a:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+
 .author {
   font-size: 0.8rem;
   font-weight: bold;
