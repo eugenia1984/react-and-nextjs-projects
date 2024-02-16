@@ -5,12 +5,11 @@
 1. **react**: some React exercise, with this file structure:
 
 ```
+> dummy-backend
 > post-app
 > react-vs-vanilla-example
 > vanilla-js
 ```
-
-- **post-app**
 
 - **vanilla-js**: an example of what we have with Vanilla JavaScript, before React
 
@@ -22,6 +21,9 @@
 <img src="https://github.com/eugenia1984/react-and-nextjs-projects/assets/72580574/2d142d9a-0bed-4583-bc9e-57e7596364c6" width="350px"  alt="React app"/>
  
 
+- **dummy-backend** a simple BackEnd, created with Node.js, for list all the post, show a post by id, and create a new post and add to the existing posts list, in order to work with data at the post-app project. It's not in a hosting, need to be run locally.
+
+- **post-app**: an app that displays posts, and you can create a new one.
 
 2. **first-app** a really simple first app with app router and two pages.
 
