@@ -43,7 +43,7 @@
 
 - [<img width="28" height="28" src="https://img.icons8.com/fluency-systems-regular/28/nextjs.png" alt="Next.js icon"/> Next.js](https://nextjs.org/)
 
-
+- [<img width="28" height="28" src="https://img.icons8.com/fluency/28/node-js.png" alt="node-js"/> Node.js](https://nodejs.org/)
 
 ---
 
