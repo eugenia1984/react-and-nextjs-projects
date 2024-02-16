@@ -26,8 +26,7 @@ npm run dev
 
 ...add a new post to the list of existing post with: `post/posts`
 
-
-Need to  Install de dependencies (node_module): ``npm install`` and run the server: ``npm start``
+Need to Install de dependencies (node_module): `npm install` and run the server: `npm start`
 
 ---
 
@@ -99,7 +98,6 @@ const Post = () => {
 
 ## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Props
 
-
 - If the `props` it's a function, we named it `onNameOfTheFunction`, like for example `onCreatePost`.
 
 ---
@@ -165,7 +163,6 @@ It's refers to the content that pass between the open and closed tag of the comp
 
 ---
 
-
 ## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/react.png" alt="React"/> Conditional render
 
 Using the `&&` if it's truthy it will be render in the UI.
@@ -176,6 +173,32 @@ Using the `&&` if it's truthy it will be render in the UI.
 
 The submit `<button type="submit">Submit</button>` always MUST have the **submit** type, because for example I can have a second button to cancel, and that button would be `type="button"`; in this way the form will now that the submit data will happen only once clicking in the **submit** button.
 
-And the ``<form>`` tag must have an **onSubmit** Event Listener, that will be a function to be execute once the submit button is clicked in order to submit the form.
+And the `<form>` tag must have an **onSubmit** Event Listener, that will be a function to be execute once the submit button is clicked in order to submit the form.
 
 Once it submitted it will make a fetch to the BackEnd to send the data with an HTTP request, we can prevent that with: `event.preventDefault();`
+
+---
+
+## Fetch
+
+The **fetch API** has the **fetch function** that it's available in teh browsers, ad it's used to **send HTTP request** from the client(Front End) to the server (BackEnd). This way we can send or get data.
+
+By default the fetch it's a **GET**, but we can pass an object as a second param to set the **method** to: **POST**, **PUT**, etc., and we can add the **body request** as a JSON ( remember we can use `JSON.stringify(data)`),in case we need it. At first param we need to put the **URL**.
+
+we can also add tings in the **header** as a **token** or 'Content-Type'.
+
+- Example:
+
+```JavaScript
+fetch('http://localhost:8080/posts', {
+  method: 'POST',
+  body: JSON.stringify(postData),
+  headers: {
+    'Content-Type': 'application/json'
+  }
+})
+```
+
+- Fetch will send the **request**. Hit the **API**, and will return a **response**.
+
+---

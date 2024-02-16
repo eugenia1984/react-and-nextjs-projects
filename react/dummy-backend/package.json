@@ -1,13 +1,13 @@
 {
-  "name": "react-crash-course-backend",
+  "name": "dummy-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple dummy backend to be ale to create an fetch posts to the post-app project",
   "main": "index.js",
   "scripts": {
     "start": "node app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["nodejs", "backend"],
+  "author": "María Eugenia Costa",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.1",
