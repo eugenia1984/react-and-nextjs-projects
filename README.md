@@ -25,6 +25,15 @@
 
 - **post-app**: an app that displays posts, and you can create a new one.
 
+-> view all the posts:
+
+<img src="https://github.com/eugenia1984/react-and-nextjs-projects/assets/72580574/5562ed56-98d6-4cba-b837-7bbfeceae5ac" width="350px" alt="posts app" />
+
+-> add new post
+
+<img src="https://github.com/eugenia1984/react-and-nextjs-projects/assets/72580574/fa326757-8ccb-4e68-a4d3-e4e4a3e0917c" width="350px" alt="posts app new post" />
+
+
 2. **first-app** a really simple first app with app router and two pages.
 
 
