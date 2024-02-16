@@ -201,4 +201,38 @@ fetch('http://localhost:8080/posts', {
 
 - Fetch will send the **request**. Hit the **API**, and will return a **response**.
 
+```JavaScript
+fetch('http://localhost:8080/posts')
+  .then(response => response.json())
+  .then(data => setPosts(data.posts));
+```
+
+-> But always need to be wrap in a useEffect, if not we are going to be in an infinite loop, updating the state, getting a change and re updating.
+
 ---
+
+## Hook: useEffect
+
+- It get a **function** as a first param, and a **dependency array** as a second param. 
+
+- The function will be execute when ever it considers a required execution depending the **dependency array**:
+
+-> if the dependency array it's `[]`, it will execute at the time the component is mounting.
+
+-> if the dependency array has something inside the array, it will execute at the time what inside the array changes.
+
+- Never return a **promise** in the function that receives the useEffect, that's why we use an inner extra function inside.
+
+Example:
+
+```JSX
+useEffect(() => {
+  async function fetchPosts() {
+    const response = await fetch("http://localhost:8080/posts");
+    const responseData = await response.json();
+    setPosts(responseData.posts);
+  }
+
+  fetchPosts();
+}, []);
+```

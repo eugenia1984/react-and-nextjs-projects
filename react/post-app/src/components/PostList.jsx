@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import PropTypes from "prop-types";
 
@@ -11,15 +11,26 @@ import classes from "./PostList.module.css";
 const PostsList = ({ isPosting, onStopPosting }) => {
   const [posts, setPosts] = useState([]);
 
+  useEffect(() => {
+    async function fetchPosts() {
+      const response = await fetch("http://localhost:8080/posts");
+      const responseData = await response.json();
+
+      setPosts(responseData.posts);
+    }
+
+    fetchPosts();
+  }, []);
+
   const addPostHandler = (postData) => {
-    fetch('http://localhost:8080/posts', {
-      method: 'POST',
+    fetch("http://localhost:8080/posts", {
+      method: "POST",
       body: JSON.stringify(postData),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        "Content-Type": "application/json",
+      },
     });
-    
+
     setPosts((existingPosts) => [postData, ...existingPosts]);
   };
 
