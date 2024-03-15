@@ -36,6 +36,7 @@
 
 2. **first-app** a really simple first app with app router and two pages.
 
+3. **starting project**: a basic NExt.js project, to use as a starting point
 
 ---
 
